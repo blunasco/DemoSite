@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>COS</title>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <h1>About Me</h1>
+    <p>Welcome to my About Me page!</p>
+
+    <!-- Embedding the timeline -->
+    <iframe width="100%" height="400" src="https://time.graphics/embed?v=1&id=944028" frameborder="0" allowfullscreen></iframe>
+    <div><a  style="font-size: 12px; text-decoration: none;" title="Create a timeline" href="https://time.graphics">Create a timeline</a></div>
+ <!-- JavaScript to load the navbar -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+</script>
+
+<script src="./app.js"></script>
+</body>
+</html>
